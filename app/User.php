@@ -4,13 +4,16 @@ namespace App;
 
 use Hash;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Jenssegers\Mongodb\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+
 
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
-
+    
+    protected $collection = 'users';
+    
     /**
      * The attributes that are mass assignable.
      *

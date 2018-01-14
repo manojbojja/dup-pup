@@ -168,6 +168,10 @@ return [
     |
     */
 
+    
+
+    
+
     'persistent_claims' => [
         // 'foo',
         // 'bar',
@@ -246,6 +250,6 @@ return [
 
     ],
 
-    'identifier' => '_id',
+    
 
 ];

@@ -20,10 +20,6 @@ class SignUpController extends Controller
             throw new HttpException(500);
         }
 
-        return response()->json([
-            'status' => $user
-        ], 201);
-
         if(!Config::get('boilerplate.sign_up.release_token')) {
             return response()->json([
                 'status' => 'ok'
